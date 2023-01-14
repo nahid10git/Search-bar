@@ -1,0 +1,22 @@
+.navbar{
+    height: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 70%;
+    margin-top: 20px;
+   
+    
+    
+   
+
+}
+.navbar a{
+    height: 50px; 
+    text-decoration: none;
+    font-weight: 600;
+    
+    
+
+}
