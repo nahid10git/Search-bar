@@ -1,22 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TextField from "@mui/material/TextField";
 import './Search.css'
 import logo from '../../Images/icon-1.jpg'
+import Country from '../Country/Country';
 
-const search = () => {
+const Search = () => {
+  const [countries, setCountries] = useState([]);
+    useEffect(()=> {
+        fetch('https://restcountries.com/v3.1/all')
+        .then(res => res.json())
+        .then(data => setCountries(data))
+        console.log(countries);
+    },[])
     return (
-        <div className='search-Fild'>
+    <div>
+      <div className='search-Fild'>
         <img src={logo} alt=''></img>
-      <div className="search">
+        <div className="search">
         <TextField
           id="outlined-basic"
           variant="outlined"
           fullWidth
           label="Search"
         />
-      </div> 
+        </div> 
+        <div className='country-container' >
+        {
+          countries.map(country => <Country 
+            country = {country}
+            ></Country>)
+        }
         </div>
+      </div>
+    </div>
     );
 };
 
-export default search;
+export default Search;
