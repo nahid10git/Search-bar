@@ -1,11 +1,11 @@
 import './Country.css'
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Country = (props) => {
-    const {name, population, flags, capital}=props.country;
+    const {name, population, flags, capital, region }=props.country;
+    // console.log(props.country);
   
-const button =()=>{
-    alert("Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla")
-  }
+
     
     return (
         <div className="country">
@@ -15,7 +15,15 @@ const button =()=>{
            <p>population:{population}</p> 
            
            <div className='btn'>
-            <button onClick={button}>Details</button>
+            <Dropdown>
+                <Dropdown.Toggle variant = 'success' id = 'dropdown-basic'>
+                    Details
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    <Dropdown href = "#/action-1">This is {region}</Dropdown>
+                </Dropdown.Menu>
+            </Dropdown>
+            
             
             </div>
             
