@@ -21,9 +21,10 @@ const Search = () => {
           id="outlined-basic"
           variant="outlined"
           fullWidth
-          label="Search"
+          label="Search a Country By name"
         />
         </div> 
+        </div>
         <div className='country-container' >
         {
           countries.map(country => <Country 
@@ -31,7 +32,7 @@ const Search = () => {
             ></Country>)
         }
         </div>
-      </div>
+      
     </div>
     );
 };

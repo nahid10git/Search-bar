@@ -4,13 +4,16 @@
     height: 400px;
     width: 300px;
     background-color: rgb(241, 238, 93);
+    text-align: center;
+    top: 10px;
+    position: relative;
     
   
    
 }
-.country img{
-    height: 200px;
-    width: 300px;
+.btn{
    
-
+    position: absolute;
+    bottom: 0;
+    
 }

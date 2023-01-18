@@ -9,16 +9,20 @@
 }
 
 
-.search-Fild img{
-    margin: 5px;
-    height: 50px;
-    width: 50px;
-    align-items: center;
-}
+
 .country-container{
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 30px;
+padding-top: 200px;
+padding-left: 100px;
+
+}
+.country-container img{
+    height: 200px;
+    width: 250px;
+    margin-top: 5px;
+   
 }
 
 .search {
