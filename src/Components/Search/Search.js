@@ -21,10 +21,12 @@ const Search = () => {
         
         
     },[])
-    console.log(countries)
+    
 
    
     const handleSearchFiled = e => {
+      
+      
       const searchText = e.target.value;
       const matchedText = countries.filter(country=>country.name.common.toLowerCase().includes(searchText.toLowerCase()))
       setDisplayCountry(matchedText);
@@ -43,7 +45,7 @@ const Search = () => {
         <TextField  id="outlined-basic"
           variant="outlined"
           fullWidth
-          label="Search a Country By Name or Capital"
+          label="Search a Country By Name"
           onChange={handleSearchFiled}
         
           

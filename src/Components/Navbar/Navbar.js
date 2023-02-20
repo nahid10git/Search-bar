@@ -1,18 +1,18 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './Navbar.css'
 
 
-const search = () => {
+const Navbar= () => {
     return (
         <div className='navbar'>
             
            
-            <a href='md'>Md+</a>
-            <a href='gmail'>Gmail</a>
-            <a href='about'>About</a>
+            <Link to='/'>Md+</Link>
+            <Link to='/about'>About</Link>
             
         </div>
     );
 };
 
-export default search;
+export default Navbar;

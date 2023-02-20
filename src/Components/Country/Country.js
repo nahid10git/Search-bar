@@ -10,7 +10,7 @@ const Country = (props) => {
     const Details = () =>{
         alert(`
         This is ${region}
-        The Currency is: ${name}
+       
         Official Off day: ${startOfWeek}
         Time Zone: ${timezones}`)
     }
